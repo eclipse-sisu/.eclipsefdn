@@ -6,7 +6,6 @@ orgs.newOrg('eclipse-sisu') {
     description: "Eclipse Sisu is a modular JSR330-based container that supports classpath scanning, auto-binding, and dynamic auto-wiring.",
     email: "webmaster@eclipse-foundation.org",
     name: "Eclipse Sisu",
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
