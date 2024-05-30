@@ -41,6 +41,11 @@ orgs.newOrg('eclipse-sisu') {
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          lock_branch: true,
+        }
+      ],
     },
     orgs.newRepo('sisu.mojos') {
       archived: true,
