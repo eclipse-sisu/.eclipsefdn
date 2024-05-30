@@ -23,13 +23,14 @@ orgs.newOrg('eclipse-sisu') {
         enabled: false,
       },
     },
-    orgs.newRepo('sisu.inject') {
+    orgs.newRepo('sisu-project') {
+      aliases: ['sisu.inject'],
       allow_update_branch: false,
-      default_branch: "master",
+      default_branch: "main",
       delete_branch_on_merge: false,
       description: "Sisu Inject",
       gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "master",
+      gh_pages_source_branch: "main",
       gh_pages_source_path: "/docs",
       has_discussions: true,
       homepage: "https://www.eclipse.org/sisu",
@@ -42,6 +43,7 @@ orgs.newOrg('eclipse-sisu') {
       ],
     },
     orgs.newRepo('sisu.mojos') {
+      archived: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -59,6 +61,7 @@ orgs.newOrg('eclipse-sisu') {
       ],
     },
     orgs.newRepo('sisu.plexus') {
+      archived: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
