@@ -35,6 +35,19 @@ orgs.newOrg('eclipse-sisu') {
       has_discussions: true,
       homepage: "https://www.eclipse.org/sisu",
       web_commit_signoff_required: false,
+      secrets: [
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "pass:bots/technology.sisu/sonarcloud.io/token",
+        },
+      ],
+      variables: [
+        orgs.newRepoVariable('SONAR_PROJECT_KEY') {
+          value: "eclipse-sisu_sisu.inject",
+        },
+        orgs.newRepoVariable('SONAR_ORGANIZATION') {
+          value: "eclipse-sisu",
+        },
+      ],
       workflows+: {
         default_workflow_permissions: "write",
       },
