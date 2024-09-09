@@ -13,16 +13,6 @@ orgs.newOrg('eclipse-sisu') {
     },
   },
   _repositories+:: [
-    orgs.newRepo('sisu-website') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      web_commit_signoff_required: false,
-      workflows+: {
-        enabled: false,
-      },
-    },
     orgs.newRepo('sisu-project') {
       aliases: ['sisu.inject'],
       allow_update_branch: false,
@@ -103,12 +93,13 @@ orgs.newOrg('eclipse-sisu') {
       description: "Sisu Website (source for Sisu website, populated from sisu-project)",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
       has_discussions: false,
       homepage: "https://eclipse-sisu.github.io/sisu-website",
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
-    }
+    },
   ],
 }
