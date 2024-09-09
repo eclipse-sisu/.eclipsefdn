@@ -3,7 +3,7 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 orgs.newOrg('eclipse-sisu') {
   settings+: {
     blog: "https://projects.eclipse.org/projects/technology.sisu",
-    description: "Eclipse Sisu is a modular JSR330-based container that supports classpath scanning, auto-binding, and dynamic auto-wiring.",
+    description: "Eclipse Sisu is a modular JSR-330-based container that supports classpath scanning, auto-binding, and dynamic auto-wiring.",
     email: "webmaster@eclipse-foundation.org",
     name: "Eclipse Sisu",
     web_commit_signoff_required: false,
@@ -96,5 +96,19 @@ orgs.newOrg('eclipse-sisu') {
         orgs.newEnvironment('github-pages'),
       ],
     },
+    orgs.newRepo('sisu-website') {
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      description: "Sisu Website (source for Sisu website, populated from sisu-project)",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      has_discussions: false,
+      homepage: "https://eclipse-sisu.github.io/sisu-website",
+      web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages'),
+      ],
+    }
   ],
 }
