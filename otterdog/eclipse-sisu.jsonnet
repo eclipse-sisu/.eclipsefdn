@@ -97,9 +97,6 @@ orgs.newOrg('eclipse-sisu') {
       has_discussions: false,
       homepage: "https://eclipse-sisu.github.io/sisu-website",
       web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages'),
-      ],
     },
   ],
 }
