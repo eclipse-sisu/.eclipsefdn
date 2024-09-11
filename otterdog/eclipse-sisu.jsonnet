@@ -19,11 +19,8 @@ orgs.newOrg('eclipse-sisu') {
       default_branch: "main",
       delete_branch_on_merge: false,
       description: "Sisu Inject",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "main",
-      gh_pages_source_path: "/docs",
       has_discussions: true,
-      homepage: "https://www.eclipse.org/sisu",
+      homepage: "https://eclipse.dev/sisu/",
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('SONAR_TOKEN') {
@@ -41,9 +38,6 @@ orgs.newOrg('eclipse-sisu') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      environments: [
-        orgs.newEnvironment('github-pages'),
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           lock_branch: true,
@@ -91,11 +85,8 @@ orgs.newOrg('eclipse-sisu') {
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "Sisu Website (source for Sisu website, populated from sisu-project)",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
       has_discussions: false,
-      homepage: "https://eclipse-sisu.github.io/sisu-website",
+      homepage: "https://eclipse.dev/sisu/",
       web_commit_signoff_required: false,
     },
   ],
