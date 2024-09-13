@@ -45,7 +45,7 @@ orgs.newOrg('eclipse-sisu') {
       ],
     },
     orgs.newRepo('sisu.mojos') {
-      archived: true,
+      archived: false,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -63,7 +63,7 @@ orgs.newOrg('eclipse-sisu') {
       ],
     },
     orgs.newRepo('sisu.plexus') {
-      archived: true,
+      archived: false,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
