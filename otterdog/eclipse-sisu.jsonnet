@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-sisu') {
+orgs.newOrg('technology.sisu', 'eclipse-sisu') {
   settings+: {
     blog: "https://projects.eclipse.org/projects/technology.sisu",
     description: "Eclipse Sisu is a modular JSR-330-based container that supports classpath scanning, auto-binding, and dynamic auto-wiring.",
