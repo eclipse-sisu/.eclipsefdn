@@ -39,7 +39,7 @@ orgs.newOrg('technology.sisu', 'eclipse-sisu') {
         default_workflow_permissions: "write",
       },
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
+        orgs.newBranchProtectionRule('master') {
           lock_branch: false,
           requires_pull_request: false,
           required_approving_review_count: 1,
