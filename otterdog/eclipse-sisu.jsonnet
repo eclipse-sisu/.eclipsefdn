@@ -40,9 +40,7 @@ orgs.newOrg('technology.sisu', 'eclipse-sisu') {
       },
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
-          lock_branch: false,
-          requires_pull_request: true,
-          required_approving_review_count: 1,
+          lock_branch: true,
         }
       ],
     },
